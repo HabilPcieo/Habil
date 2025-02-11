@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun</title>
+  <style>
+    /* Menentukan gaya umum untuk seluruh halaman */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #F8E7F6;
+      font-family: 'Arial', sans-serif;
+      flex-direction: column;
+    }
+
+    /* Gaya untuk teks pertama */
+    .message {
+      font-size: 50px;
+      font-weight: bold;
+      color: #eb92f9;
+      text-transform: uppercase;
+      animation: moveText 6s ease-in-out forwards; /* Menggunakan forwards agar animasi berhenti setelah selesai */
+      margin: 10px;
+    }
+
+    /* Animasi untuk menggerakkan teks pertama */
+    @keyframes moveText {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(0); /* Tetap di tengah */
+      }
+    }
+
+    /* Gaya untuk teks kedua */
+    .message2 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #d657b0;
+      text-transform: uppercase;
+      opacity: 0; /* Menyembunyikan teks pertama kali */
+      animation: moveText2 6s 6s ease-in-out forwards; /* Animasi dimulai setelah 6 detik (setelah teks pertama selesai) */
+    }
+
+    /* Animasi untuk teks kedua */
+    @keyframes moveText2 {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0; /* Teks dimulai tersembunyi */
+      }
+      50% {
+        transform: translateX(0);
+        opacity: 1; /* Teks menjadi terlihat */
+      }
+      100% {
+        transform: translateX(0); /* Tetap di tengah */
+        opacity: 1; /* Teks tetap terlihat */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message">Selamat Ulang Tahun!</div>
+  <div class="message2"> Zahra Gacor Gak  </div>
+
+</body>
+</html>
